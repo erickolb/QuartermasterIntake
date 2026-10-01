@@ -3,6 +3,10 @@
 body { margin: 0; padding: 48px 20px; }
 main { max-width: 720px; margin: auto; padding: 36px; background: #fff; border-top: 6px solid #673b61; border-radius: 8px; }
 h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 8px 0 20px; letter-spacing: -.04em; }
+.app-heading { display: flex; align-items: center; gap: 20px; margin: 20px 0; }
+.app-heading h1 { margin: 0; }
+.app-icon { display: grid; place-items: center; width: 96px; height: 96px; flex-shrink: 0; background: #673b61; border-radius: 20px; }
+.app-icon img { width: 75%; height: 75%; object-fit: contain; }
 h2 { font-size: 1.2rem; margin-top: 32px; }
 p, li { line-height: 1.65; }
 li { margin: 12px 0; }

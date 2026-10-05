@@ -2,15 +2,17 @@
 
 Android and iOS applications for rapid intake into the private Chateau Lore Quartermaster application. They require privately provisioned credentials.
 
-This repository contains the public download page, release artifacts, and the native iOS client source in `ios/`. The Quartermaster server source and credentials remain private.
+This repository contains only the public download page, installation guides, and compiled release artifacts. Both Android and iOS source and build automation are maintained in the private Quartermaster repository. No source is published here for new builds.
 
-For iOS installation through SideStore, building an IPA, and device enrollment, see [the iOS guide](ios/README.md). Download `QM-Intake.ipa` from the dedicated iOS release. The iOS app has no extensions.
+For iOS installation through SideStore and device enrollment, see [the iOS guide](docs/ios.md). Download `QM-Intake.ipa` from the dedicated iOS release. The iOS app has no extensions.
 
 Download page: https://erickolb.github.io/QuartermasterIntake/
 
 ## Releases
 
-Publish signed APKs as GitHub release assets named `QM-Intake.apk`. Keep this filename consistent so the page's latest-release download link works. Increase the Android version code for each update and keep the same signing key. Publish iOS packages as `QM-Intake.ipa` on separate prereleases so Android's latest-release link continues to resolve to an APK.
+Private Quartermaster workflows publish signed Android APKs as `QM-Intake.apk` and SideStore iOS packages as `QM-Intake.ipa`, with checksums and release notes. Keep these filenames consistent with the download page. Android remains Latest so the latest-release APK link works. iOS releases are regular releases explicitly published without the Latest label; the page links to a specific iOS release.
+
+Release titles use `QM Intake VERSION for Android` and `QM Intake VERSION for iOS (build NUMBER)`. Increase the Android version code for updates and retain its signing key. Increase the iOS build number for each published IPA. Update the page's iOS link when a new build is released.
 
 ## GitHub Pages
 

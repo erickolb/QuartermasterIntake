@@ -1,3 +1,0 @@
-*.sh text eol=lf
-*.swift text eol=lf
-*.pbxproj text eol=lf

@@ -1,0 +1,26 @@
+name: iOS sideload build
+on:
+  push:
+    paths: ['ios/**', 'scripts/build-ipa.sh', '.github/workflows/ios.yml']
+  pull_request:
+    paths: ['ios/**', 'scripts/build-ipa.sh', '.github/workflows/ios.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Simulator tests
+        run: |
+          DEVICE=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin); print(next(x["udid"] for k,v in d["devices"].items() if "iOS" in k for x in v if "iPhone" in x["name"]))')
+          xcodebuild -project ios/QMIntake.xcodeproj -scheme QMIntake -destination "platform=iOS Simulator,id=$DEVICE" CODE_SIGNING_ALLOWED=NO test
+      - name: Build SideStore IPA
+        env:
+          BUILD_NUMBER: ${{ github.run_number }}
+        run: bash scripts/build-ipa.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QM-Intake-iOS
+          path: dist/QM-Intake.ipa

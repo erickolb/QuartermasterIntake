@@ -21,3 +21,7 @@ Release titles use `QM Intake VERSION for Android` and `QM Intake VERSION for iO
 In repository Settings → Pages, set Source to GitHub Actions. The included workflow deploys `docs/` when `main` changes; it can also be run manually. Forward `intake.quartermaster.chateaulore.net` to the download page URL above. A forwarding address does not require a CNAME file here.
 
 The Obtainium button uses the official Obtainium icon from https://github.com/ImranR98/Obtainium and its `obtainium://add/` link format.
+
+## SideStore update source
+
+The download page includes an **Add to SideStore** button. Pages generates a validated iOS-only source from published release IPAs on each deployment, including iOS release events. See [SideStore setup, publishing, and recovery](docs/sidestore.md).

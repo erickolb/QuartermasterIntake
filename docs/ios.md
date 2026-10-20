@@ -4,7 +4,7 @@ Native camera-first intake client for iOS 17 or newer. Uses the same authenticat
 
 ## Install with SideStore
 
-Download [QM-Intake.ipa for iOS 0.3.0 (build 1)](https://github.com/erickolb/QuartermasterIntake/releases/download/ios-v0.3.0-build1/QM-Intake.ipa), then import it into your existing SideStore installation. SideStore signs the package for your device. This app contains no extensions and needs one app ID. Refresh it through SideStore before its signing period expires, using the same Apple account and app identity to preserve access to saved credentials.
+Open the [download page](https://erickolb.github.io/QuartermasterIntake/) in Safari on your iPhone, tap **Add to SideStore**, confirm the source, and install QM Intake from its listing. For an existing local IPA installation, use the same Apple account and install/update from the source without deleting the app first. See [SideStore updates](sidestore.md) for migration steps and future updates. Manual [IPA downloads](https://github.com/erickolb/QuartermasterIntake/releases/download/ios-v0.3.0-build1/QM-Intake.ipa) remain available. SideStore signs the package for your device. This app contains no extensions and needs one app ID. Refresh it through SideStore before its signing period expires, using the same Apple account and app identity to preserve access to saved credentials.
 
 Open Settings and enter the HTTPS server origin, device ID, and one-time secret issued privately for this phone. Tap **Save and test connection**. Register the iPhone separately from Android. On astralplane:
 

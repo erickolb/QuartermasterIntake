@@ -5,3 +5,5 @@ DerivedData/
 xcuserdata/
 *.xcuserstate
 .DS_Store
+__pycache__/
+docs/apps.json

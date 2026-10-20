@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  release:
+    types: [published, edited, deleted, unpublished]
 permissions:
   contents: read
   pages: write
@@ -12,12 +14,24 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
+    if: github.event_name != 'release' || startsWith(github.event.release.tag_name, 'ios-v')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test SideStore source generator
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+      - name: Generate SideStore source from published iOS IPAs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/sidestore_source.py
       - uses: actions/configure-pages@v5
         with:
           enablement: true

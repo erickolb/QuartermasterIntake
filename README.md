@@ -10,6 +10,8 @@ Download page: https://erickolb.github.io/QuartermasterIntake/
 
 ## Releases
 
+Current downloads: [Android 0.3.0](https://github.com/erickolb/QuartermasterIntake/releases/tag/v0.3.0) and [iOS 0.3.0 (build 1)](https://github.com/erickolb/QuartermasterIntake/releases/tag/ios-v0.3.0-build1). Both add an optional expiration date picker with a clear button and draft recovery; expiration dates require Quartermaster 1.0.
+
 Private Quartermaster workflows publish signed Android APKs as `QM-Intake.apk` and SideStore iOS packages as `QM-Intake.ipa`, with checksums and release notes. Keep these filenames consistent with the download page. Android remains Latest so the latest-release APK link works. iOS releases are regular releases explicitly published without the Latest label; the page links to a specific iOS release.
 
 Release titles use `QM Intake VERSION for Android` and `QM Intake VERSION for iOS (build NUMBER)`. Increase the Android version code for updates and retain its signing key. Increase the iOS build number for each published IPA. Update the page's iOS link when a new build is released.

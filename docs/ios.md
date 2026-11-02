@@ -26,3 +26,4 @@ Draft fields and photos remain in private, protected app storage, excluded from 
 Uninstalling the app removes drafts. Reinstalling or changing the signing identity can require entering device credentials again. Keep the one-time secret privately or issue a new device registration.
 
 Builds are maintained in the private Quartermaster repository. This public repository distributes the compiled app and installation guide.
+

@@ -1,10 +1,10 @@
 # QM Intake for iOS
 
-Native camera-first intake client for iOS 17 or newer. Uses the same authenticated Quartermaster `/v1` API as Android. App version 1.0.1, build 3. Expiration dates require Quartermaster 1.0.
+Native camera-first intake client for iOS 17 or newer. Uses the same authenticated Quartermaster `/v1` API as Android. App version 1.0.2, build 4. Expiration dates require Quartermaster 1.0.
 
 ## Install with SideStore
 
-Open the [download page](https://erickolb.github.io/QuartermasterIntake/) in Safari on your iPhone, tap **Add to SideStore**, confirm the source, and install QM Intake from its listing. For an existing local IPA installation, use the same Apple account and install/update from the source without deleting the app first. See [SideStore updates](sidestore.md) for migration steps and future updates. Manual [IPA downloads](https://github.com/erickolb/QuartermasterIntake/releases/download/ios-v1.0.1-build3/QM-Intake.ipa) remain available. SideStore signs the package for your device. This app contains no extensions and needs one app ID. Refresh it through SideStore before its signing period expires, using the same Apple account and app identity to preserve access to saved credentials.
+Open the [download page](https://erickolb.github.io/QuartermasterIntake/) in Safari on your iPhone, tap **Add to SideStore**, confirm the source, and install QM Intake from its listing. For an existing local IPA installation, use the same Apple account and install/update from the source without deleting the app first. See [SideStore updates](sidestore.md) for migration steps and future updates. Manual [IPA downloads](https://github.com/erickolb/QuartermasterIntake/releases/download/ios-v1.0.2-build4/QM-Intake.ipa) remain available. SideStore signs the package for your device. This app contains no extensions and needs one app ID. Refresh it through SideStore before its signing period expires, using the same Apple account and app identity to preserve access to saved credentials.
 
 Open Settings and enter the HTTPS server origin, device ID, and one-time secret issued privately for this phone. Tap **Save and test connection**. Register the iPhone separately from Android. On astralplane:
 
@@ -29,3 +29,5 @@ Builds are maintained in the private Quartermaster repository. This public repos
 
 
 New items default to the last successfully added location during the current app session. A new session starts blank; discarded drafts do not change the remembered location.
+
+Version 1.0.2 adds a default-off Low Quantity toggle for consumables. Draft recovery preserves the setting; turning Consumable off clears it.

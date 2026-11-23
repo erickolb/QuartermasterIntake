@@ -10,7 +10,7 @@ Download page: https://erickolb.github.io/QuartermasterIntake/
 
 ## Releases
 
-Current downloads: [Android 1.0.2](https://github.com/erickolb/QuartermasterIntake/releases/tag/v1.0.2) and [iOS 1.0.2 (build 4)](https://github.com/erickolb/QuartermasterIntake/releases/tag/ios-v1.0.2-build4). Both include camera intake, locations, notes, tags, consumables, expiration dates, and saved draft recovery; expiration dates require Quartermaster 1.0.
+Current downloads: [Android 1.0.3](https://github.com/erickolb/QuartermasterIntake/releases/tag/v1.0.3) and [iOS 1.0.3 (build 5)](https://github.com/erickolb/QuartermasterIntake/releases/tag/ios-v1.0.3-build5). Both include camera intake, locations, notes, tags, consumables, expiration dates, and saved draft recovery; expiration dates require Quartermaster 1.0.
 
 Private Quartermaster workflows publish signed Android APKs as `QM-Intake.apk` and SideStore iOS packages as `QM-Intake.ipa`, with checksums and release notes. Keep these filenames consistent with the download page. Android remains Latest so the latest-release APK link works. iOS releases are regular releases explicitly published without the Latest label; the page links to a specific iOS release.
 
@@ -26,6 +26,8 @@ The Obtainium button uses the official Obtainium icon from https://github.com/Im
 
 The download page includes an **Add to SideStore** button. Pages generates a validated iOS-only source from published release IPAs on each deployment, including iOS release events. See [SideStore setup, publishing, and recovery](docs/sidestore.md).
 
-In version 1.0.2, new items default to the last successfully added location during the current app session. New sessions start blank; discarded drafts do not change the remembered location.
+New items default to the last successfully added location during the current app session. New sessions start blank; discarded drafts do not change the remembered location.
 
-Version 1.0.2 adds a default-off Low Quantity toggle for consumables. Draft recovery preserves the setting; turning Consumable off clears it.
+Low Quantity defaults off for consumables. Draft recovery preserves the setting; turning Consumable off clears it.
+
+Expiration date controls appear only while Consumable is on. Toggling it off preserves the selected date for toggling back on.
